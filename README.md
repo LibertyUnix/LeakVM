@@ -3,6 +3,8 @@ LeakVM
 
 ![LeakVM](LeakVM.jpg)
 
+You team are ready for us ?<br><br>
+
 This code was developed by me: Jheto Xekri<br>
 
 You can contact me at:<br>
