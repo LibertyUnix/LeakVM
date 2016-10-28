@@ -1,7 +1,7 @@
 LeakVM
 ======
 
-![LeakVM](bgr.jpg)
+![LeakVM](LeakVM.jpg)
 
 This code was developed by me: Jheto Xekri<br>
 
