@@ -16,6 +16,7 @@ Our versions:<br>
 -Private File Extractor (bypass security protections)<br>
 -Advanced reflection (bypass OOP language rules)<br>
 -KeyStore Extractor(bypass security protections)<br>
+-Observers to track all linux enviroment<br>
 
 [Intrusion]<br>
 -Collection of 'metadata' (Photo, Audio, Video, files)<br>
