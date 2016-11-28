@@ -20,7 +20,7 @@ Our versions:<br>
 [Intrusion]<br>
 -Collection of 'metadata' (Photo, Audio, Video, files)<br>
 -Decentralized command and control (C&C)<br>
--NearBy Monitor (IMSI Catcher)<br>
+-NearBy Monitor (NearBy Devices)<br>
 -Remote Code Execution<br>
 -Record Voice/Video<br>
 -Password Extractor<br>
