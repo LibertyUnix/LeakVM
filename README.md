@@ -9,7 +9,7 @@ The sales for LeakVM will be start only by Bitcoin/Western Union, because my fuc
 
 Our versions:<br>
 
-[Research]<br>
+[Research] $ 1.000 USD per year (Distributed by me)<br>
 -Dynamic load for libraries (APK/ELF) with native support (x86, MIPS, Arm) for 32/64 bits<br>
 -Native Library Injection (inject libs on another apps)<br>
 -Privilege escalation (elevate abnormally privileges)<br>
@@ -18,7 +18,7 @@ Our versions:<br>
 -KeyStore Extractor(bypass security protections)<br>
 -Observers to track all linux enviroment<br>
 
-[Intrusion]<br>
+[Intrusion] $ 250.000 USD per year (Distributed by Xtreme Tech LLC)<br>
 -Collection of 'metadata' (Photo, Audio, Video, files)<br>
 -Decentralized command and control (C&C)<br>
 -NearBy Monitor (NearBy Devices)<br>
