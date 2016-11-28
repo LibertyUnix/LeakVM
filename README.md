@@ -10,7 +10,7 @@ The sales for LeakVM will be start only by Bitcoin/Western Union, because my fuc
 Our versions:<br>
 
 [Research]<br>
--Dynamic load for libraries (APK/ELF) with navive libs support (x86, MIPS, Arm) for 32/64 bits<br>
+-Dynamic load for libraries (APK/ELF) with native support (x86, MIPS, Arm) for 32/64 bits<br>
 -Native Library Injection (inject libs on another apps)<br>
 -Privilege escalation (elevate abnormally privileges)<br>
 -Private File Extractor (bypass security protections)<br>
