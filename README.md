@@ -7,6 +7,8 @@ You team are ready for us ?<br><br>
 
 The sales for LeakVM will be start only by Bitcoin/Western Union, because my fucking country (Colombia) can't receive money for new accounts, the US banking can't open an fucking acount (Bank Of America, Wells Fargo, Chase).<br>
 
+We decided register own company as 'Xtreme Tech LLC' on Cayman Islands, because obvious reasons, and all fucking problems and restrictions on Colombia, US and EU. 
+
 Our versions:<br>
 
 [Research] $ 1.000 USD per year (Distributed by me)<br>
