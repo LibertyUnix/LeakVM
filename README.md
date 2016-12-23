@@ -3,7 +3,7 @@ LeakVM
 
 ![LeakVM](LeakVM.jpg)
 
-You team are ready for us ?<br><br>
+You team are ready for us ?<br>
 
 Our versions:<br>
 
