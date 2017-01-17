@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+    <!-- Favicon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Facebook -->
+    <meta property="og:url" content="https://jhetox.github.io/LeakVM/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="LeakVM: Research & Pentesting for Android" />
+    <meta property="og:description" content="Advanced Reflexing, Injection, Loading, Privileges Escalation and more ..." />
+    <meta property="og:image" content="https://github.com/JhetoX/LeakVM/raw/master/LeakVM.jpg" />
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Material -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-pink.min.css" />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <!-- Material Dialogs -->
+    <link rel="stylesheet" href="vendor/css/dialog-polyfill.css">
+    <script src="vendor/js/dialog-polyfill.js"></script>
+    <link rel="stylesheet" href="vendor/css/mdl-jquery-modal-dialog.css">
+    <script src="vendor/js/mdl-jquery-modal-dialog.js"></script>
+
+    <!-- LeakVM -->
+    <link rel="stylesheet" href="vendor/css/leakvm.css">
+    <script src="vendor/js/leakvm.js"></script>
+
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        /*$(document).ready(function() {
+           onReady(true, function() {
+               //cargar los datos del main
+           });
+        });*/
+    </script>
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+          <div class="mdl-layout__header-row">
+              <span class="mdl-layout-title">LeakVM / Documentation</span>
+              <div class="mdl-layout-spacer"></div>
+              <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
+                  <i class="material-icons">more_vert</i>
+              </button>
+              <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+                  <li class="mdl-menu__item mdl-layout--small-screen-only" onclick="showPrivacyTermsDialog()">Privacy & Terms</li>
+                  <li class="mdl-menu__item mdl-layout--small-screen-only" onclick="showShareDialog()">Share Us</li>
+                  <li class="mdl-menu__item mdl-layout--small-screen-only" onclick="showContactDialog()">Contact</li>
+                  <li class="mdl-menu__item" onclick="showAboutDialog()">About</li>
+              </ul>
+          </div>
+      </header>
+
+        <main class="mdl-layout__content mdl-color--blue-grey-900">
+            <div class="page-content">
+                <!-- Your content goes here -->
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+        </main>
+        <footer class="mdl-mini-footer">
+            <div class="mdl-mini-footer__left-section">
+                <div class="mdl-logo">&copy; 2017 LeakVM. All rights reserved.</div>
+                <ul class="mdl-mini-footer__link-list mdl-layout--large-screen-only">
+                    <li><a onclick="showPrivacyTermsDialog()" href="#">Privacy & Terms</a></li>
+                    <li><a onclick="showShareDialog()" href="#">Share Us</a></li>
+                    <li><a onclick="showContactDialog()" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

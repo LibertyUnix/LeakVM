@@ -1,4 +1,235 @@
-<!DOCTYPE html>
-<html lang="en">
-	<title>Test</title>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+        <!-- Favicon-->
+        <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Facebook -->
+        <meta property="og:url" content="https://jhetox.github.io/LeakVM/" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="LeakVM: Research & Pentesting for Android" />
+        <meta property="og:description" content="Advanced Reflexing, Injection, Loading, Privileges Escalation and more ..." />
+        <meta property="og:image" content="https://github.com/JhetoX/LeakVM/raw/master/LeakVM.jpg" />
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+        <!-- Material -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-pink.min.css" />
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+        <!-- Material Dialogs -->
+        <link rel="stylesheet" href="vendor/css/dialog-polyfill.css">
+        <script src="vendor/js/dialog-polyfill.js"></script>
+        <link rel="stylesheet" href="vendor/css/mdl-jquery-modal-dialog.css">
+        <script src="vendor/js/mdl-jquery-modal-dialog.js"></script>
+
+        <!-- LeakVM -->
+        <link rel="stylesheet" href="vendor/css/leakvm.css">
+        <script src="vendor/js/leakvm.js"></script>
+
+        <style>
+            body::before {
+                background-size: cover;
+                background-attachment: fixed;
+                content: '';
+                will-change: transform;
+                z-index: -1;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                position: fixed;
+            }
+
+            demo-card-wide.mdl-card {
+                width: 512px;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                background-color: #ACEC00
+            }
+
+            .demo-card-wide > .mdl-card__title {
+                color: #fff;
+                height: 176px;
+                background: url('https://getmdl.io/assets/demos/welcome_card.jpg') center / cover;
+            }
+
+            .demo-card-wide > .mdl-card__menu {
+                color: #fff;
+            }
+
+        </style>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+               var error = getParam("error");
+               if(error !== null){
+                   if(error === "badToken") showInfoDialog("Login", "Sorry, Your token is old, get one new token");
+                   else showInfoDialog("Login", "Sorry, Your login has a bad parameters, get one new token");
+               }
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                    <span class="mdl-layout-title">LeakVM</span>
+                    <div class="mdl-layout-spacer"></div>
+                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
+                        <i class="material-icons">more_vert</i>
+                    </button>
+                    <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+                        <li class="mdl-menu__item mdl-layout--small-screen-only" onclick="showPrivacyTermsDialog()">Privacy & Terms</li>
+                        <li class="mdl-menu__item mdl-layout--small-screen-only" onclick="showShareDialog()">Share Us</li>
+                        <li class="mdl-menu__item mdl-layout--small-screen-only" onclick="showContactDialog()">Contact</li>
+                        <li class="mdl-menu__item" onclick="showAboutDialog()">About</li>
+                    </ul>
+                </div>
+            </header>
+
+            <main class="mdl-layout__content mdl-color--blue-grey-900">
+
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--5-col">
+                        <h2 class="mdl-color-text--grey-50">Run security tests instantly</h2>
+                        <button onclick="showRegisterDialog()" type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-button--raised mdl-js-ripple-effect">Register</button>
+                        &nbsp;
+                        <button onclick="showLoginDialog()" type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-button--raised mdl-js-ripple-effect">Login</button>
+                    </div>
+                </div>
+
+                <div class="android-card-container mdl-grid">
+                    <div class="index-card-wide mdl-card mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-phone index-why-card">
+                        <div class="mdl-card__title">
+                          <h2 class="mdl-card__title-text">&nbsp;Why LeakVM&nbsp;</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <span class="mdl-typography--font-light mdl-typography--subhead">
+                                LeakVM fast security test on Android, by skipping the time consuming build pentest laboratories, you test on real devices, do not need root your smartphone. LeakVM makes researchers and pentesters more productive since they can run test on real time and on real environments.
+                                <br><br>Our technology uses the same techniques used in criminal software, but in a controlled environment, you always have control over the SDK, our product, gives you a real approach against real malware and/or real attacks.
+                            </span>
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                          <a onclick="showRegisterDialog()" href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Try LeakVM now<i class="material-icons">chevron_right</i></a>
+                        </div>
+                    </div>
+
+                    <div class="index-card-wide mdl-card mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-phone index-features-card">
+                        <div class="mdl-card__title">
+                          <h2 class="mdl-card__title-text">&nbsp;Features&nbsp;</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <span class="mdl-typography--font-light mdl-typography--subhead">
+                                Current features:<br>
+                                <ul>
+                                <li>Linux common features</li>
+                                <li>Dynamic library loading</li>
+                                <li>Native library injection</li>
+                                <li>Private file extractor</li>
+                                <li>Privilege escalation</li>
+                                <li>KeyStore extraction</li>
+                                <li>Advanced reflection</li>
+                                <li>Core Observers</li>
+                                <li>Extensible</li>
+                                </ul>
+                                <br>On the future we add more and join another private projects with LeakVM.
+                            </span>
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                          <a href="features.html" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read more<i class="material-icons">chevron_right</i></a>
+                        </div>
+                    </div>
+
+                    <div class="index-card-wide mdl-card mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-phone index-pricing-card">
+                        <div class="mdl-card__title">
+                          <h2 class="mdl-card__title-text">&nbsp;Pricing&nbsp;</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <span class="mdl-typography--font-light mdl-typography--subhead">
+                                <div class="mdl-card__title-text mdl-color-text--light-green-A700">1000 USD</div>
+                                <br>Includes:<br>
+                                <ul>
+                                    <li>Annually per license</li>
+                                    <li>Support for Android 4.0 to 6.0</li>
+                                    <li>Private analysis, we not collect data</li>
+                                    <li>Use with Android Studio & Eclipse easily</li>
+                                    <li>Available as dedicated, is not transferable</li>
+                                    <li>Account protection, we not use passwords</li>
+                                    <li>Allows uses of any amount of android devices</li>
+                                    <li>Your devices should not be used by other users</li>
+                                    <li>Support and updates included with subscription</li>
+                                </ul>
+                                The account & devices can be banned by:<br>
+                                <ul>
+                                    <li>Share account</li>
+                                    <li>Use for criminal purposes</li>
+                                </ul>
+                            </span>
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                          <a onclick="showRegisterDialog()" href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Buy Today<i class="material-icons">chevron_right</i></a>
+                        </div>
+                    </div>
+
+                    <div class="index-card-wide mdl-card mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-phone index-documentation-card">
+                        <div class="mdl-card__title">
+                          <h2 class="mdl-card__title-text">&nbsp;Documentation&nbsp;</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <span class="mdl-typography--font-light mdl-typography--subhead">
+                                The SDK is easy to use and full documented<br>
+                                <ul>
+                                  <li>Startup</li>
+                                  <li>Project configuration</li>
+                                  <li>Extensible features</li>
+                                  <li>Exploit Packing</li>
+                                  <li>Examples</li>
+                                  <li>JavaDoc</li>
+                                </ul>
+                            </span>
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                          <a href="documentation.html" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read more<i class="material-icons">chevron_right</i></a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo">&copy; 2017 LeakVM. All rights reserved.</div>
+                    <ul class="mdl-mini-footer__link-list mdl-layout--large-screen-only">
+                        <li><a onclick="showPrivacyTermsDialog()" href="#">Privacy & Terms</a></li>
+                        <li><a onclick="showShareDialog()" href="#">Share Us</a></li>
+                        <li><a onclick="showContactDialog()" href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </body>
+
 </html>
