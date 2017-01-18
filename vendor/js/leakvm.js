@@ -572,7 +572,7 @@ function onReady(redirect, callback) {
         type: 'GET',
         url: getBaseAPI() + 'web/session/requestCheckSession.php',
         crossDomain: true,
-        dataType: 'json',
+        dataType: 'jsonp',
         xhrFields: {
             withCredentials: true
         },
@@ -596,7 +596,7 @@ function onService(callback) {
         type: 'GET',
         url: getBaseAPI() + 'web/service/requestServiceInfo.php',
         crossDomain: true,
-        dataType: 'json',
+        dataType: 'jsonp',
         xhrFields: {
             withCredentials: true
         },
@@ -619,7 +619,7 @@ function onLogout(callback){
         type: 'GET',
         url: getBaseAPI() + 'web/session/requestLogout.php',
         crossDomain: true,
-        dataType: 'json',
+        dataType: 'jsonp',
         xhrFields: {
             withCredentials: true
         },
@@ -644,7 +644,7 @@ function onLogin(email, callback){
         type: 'POST',
         url: getBaseAPI() + 'web/session/requestUserToken.php',
         crossDomain: true,
-        dataType: 'json',
+        dataType: 'jsonp',
         data: {
             'email': email
         },
@@ -672,7 +672,7 @@ function onRegister(name, email, company, callback){
         type: 'POST',
         url: getBaseAPI() + 'web/session/requestCreateUser.php',
         crossDomain: true,
-        dataType: 'json',
+        dataType: 'jsonp',
         data: {
             'company': company,
             'email': email,
@@ -702,7 +702,7 @@ function onContact(email, subject, message, callback) {
         type: 'POST',
         url: getBaseAPI() + 'web/contact/requestContact.php',
         crossDomain: true,
-        dataType: 'json',
+        dataType: 'jsonp',
         data: {
             'email': email,
             'message': message,
@@ -719,7 +719,7 @@ function onContact(email, subject, message, callback) {
             }
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
-            console.log("onContact error:", textStatus);
+            console.log("onContact error:", textStatus, errorThrown);
             if(callback !== undefined && callback !== null){
                 callback.call(undefined, false, "Sorry, the Server has an internal error, try again.");
             }
@@ -732,7 +732,7 @@ function onListApplications(callback){
         type: 'GET',
         url: getBaseAPI() + 'web/application/requestListApplications.php',
         crossDomain: true,
-        dataType: 'json',
+        dataType: 'jsonp',
         xhrFields: {
             withCredentials: true
         },
@@ -767,7 +767,7 @@ function onAddApplication(package, signature, callback){
         contentType: 'application/json; charset=utf-8',
         data: JSON.stringify(application),
         crossDomain: true,
-        dataType: 'json',
+        dataType: 'jsonp',
         xhrFields: {
             withCredentials: true
         },
@@ -806,7 +806,7 @@ function onRemoveApplication(package, signature, key, callback) {
         contentType: 'application/json; charset=utf-8',
         data: JSON.stringify(application),
         crossDomain: true,
-        dataType: 'json',
+        dataType: 'jsonp',
         xhrFields: {
             withCredentials: true
         },
@@ -833,7 +833,7 @@ function onListDevices(callback){
         type: 'GET',
         url: getBaseAPI() + 'web/device/requestListDevices.php',
         crossDomain: true,
-        dataType: 'json',
+        dataType: 'jsonp',
         xhrFields: {
             withCredentials: true
         },
