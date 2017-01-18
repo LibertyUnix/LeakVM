@@ -1,23 +1,22 @@
-LeakVM
-======
+<h2>LeakVM: Run security tests instantly</h2>
+============================================
 
 ![LeakVM](LeakVM.jpg)
 
-<h2>Run security tests instantly</h2><br>
-
-Linux common features<br>
-Dynamic library loading<br>
-Native library injection<br>
-Private file extractor<br>
-Privilege escalation<br>
-KeyStore extraction<br>
-Advanced reflection<br>
-Core Observers<br>
-Extensible<br>
+<b>Features</b>:<br>
+* Linux common features<br>
+* Dynamic library loading<br>
+* Native library injection<br>
+* Private file extractor<br>
+* Privilege escalation<br>
+* KeyStore extraction<br>
+* Advanced reflection<br>
+* Core Observers<br>
+* Extensible<br>
 
 You team are ready for us ?<br>
 
-Test our trial on [LeakVM](https://jhetox.github.io/LeakVM/)<br>
+Test our trial on [LeakVM](https://jhetox.github.io/LeakVM/)<br><br>
 
 This code was developed by me: Jheto Xekri<br>
 
