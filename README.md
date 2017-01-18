@@ -16,7 +16,7 @@
 
 You team are ready for us ?<br>
 
-Test our trial on [LeakVM](https://jhetox.github.io/LeakVM/)<br><br>
+Test our trial on [LeakVM](https://jhetox.github.io/LeakVM/) or follow us on [Twitter](https://twitter.com/search?q=%23LeakVM)<br><br>
 
 This code was developed by me: Jheto Xekri<br>
 
