@@ -274,7 +274,7 @@ function showRegisterDialog() {
         "</div>" +
         "<label class=\"mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect\" for=\"checkbox1\">" +
         "<input type=\"checkbox\" id=\"checkbox1\" class=\"mdl-checkbox__input\">" +
-        "<span class=\"mdl-checkbox__label\">I agree with the terms and conditions of the <a class=\"mdl-color-text--grey-500\" href=\"#\">LeakVM License Agreement.</a></span>" +
+        "<span class=\"mdl-checkbox__label\">I agree with the terms and conditions of the <a class=\"mdl-color-text--grey-500\" target=\"_blank\" href=\"policy.html\">LeakVM License Agreement.</a></span>" +
         "</label>";
 
     var checkedOK = false, nameOk = false, emailOk = false;
