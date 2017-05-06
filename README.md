@@ -3,11 +3,13 @@
 ![LeakVM](LeakVM.jpg)
 
 <b>Features</b>:<br>
-* Linux common features<br>
+* Ptrace/ASLR/Yama Bypass<br>
 * Dynamic library loading<br>
 * Native library injection<br>
 * Private file extractor<br>
+* Linux common features<br>
 * Privilege escalation<br>
+* VM library injection<br>
 * KeyStore extraction<br>
 * Advanced reflection<br>
 * Core Observers<br>
