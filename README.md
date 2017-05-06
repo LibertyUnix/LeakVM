@@ -1,5 +1,4 @@
 <h2>LeakVM: Run security tests instantly</h2>
-============================================
 
 ![LeakVM](LeakVM.jpg)
 
@@ -16,7 +15,7 @@
 
 You team are ready for us ?<br>
 
-Test our trial on [LeakVM](https://jhetox.github.io/LeakVM/) or follow us on [Twitter](https://twitter.com/search?q=%23LeakVM)<br><br>
+See our Web Interface (DEMO) on [LeakVM](https://jhetox.github.io/LeakVM/) our JavaDoc on [JavaDoc](https://jhetox.github.io/LeakVM/javadoc/) or follow us on [Twitter](https://twitter.com/search?q=%23LeakVM)<br><br>
 
 This code was developed by me: Jheto Xekri<br>
 
